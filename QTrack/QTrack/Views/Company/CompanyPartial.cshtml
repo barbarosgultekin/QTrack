@@ -1,0 +1,42 @@
+﻿@model EntityLayer.Concrete.Company
+
+<div id="static" class="modal" tabindex="-1" style="" data-backdrop="static" data-keyboard="true">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title"> Company Register</h2>
+        </div>
+        <form method="post" action="/Company/AddCompany">
+            <div class="modal-body">
+                <label> Company Name</label>
+                <input type="text" name="CNAME" class="form-control" />
+                @Html.ValidationMessageFor(model => model.CNAME, "", new { @class = "text-danger" })
+                <br />
+                <label> Adress</label>
+                <input type="text" name="CADDRESS" class="form-control">
+                <br />
+                <label> Phone </label>
+                <input type="text" name="CPHONE" class="form-control">
+                <br />
+                <label> Person </label>
+                <input type="text" name="CPERSON" class="form-control">
+                <br />
+                <label> Domain </label>
+                <input type="text" name="CDOMAIN" class="form-control">
+                <br />
+                <label> Status </label>
+                <br />
+                <input type="checkbox" name="CSTATUS" class="make-switch" checked value="True" data-on-text="Active" data-off-text="Passive">
+                <br />
+                <br />
+                <label> Country </label>
+                <select id="country" name="COUNTRY" class="form-control">
+                    <option value="">- Select -</option>
+                </select>
+            </div>
+            <div class="modal-footer">
+                <button type="button" data-dismiss="modal" class="btn btn-outline dark">Cancel</button>
+                <button class="btn green">Save Changes</button>
+            </div>
+        </form>
+    </div>
+</div>

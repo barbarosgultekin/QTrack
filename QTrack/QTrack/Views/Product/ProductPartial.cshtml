@@ -1,0 +1,71 @@
+﻿
+<div id="static" class="modal fade bs-modal-lg" tabindex="-1" data-backdrop="static" data-keyboard="true" data-width="1000">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title"> Product Register</h2>
+        </div>
+        <form method="post" action="/Product/AddProduct">
+            <div class="modal-body">
+                @*<div style="height:300px" data-always-visible="1" data-rail-visible1="1">*@
+                <div style="height:auto" data-always-visible="1" data-rail-visible1="1">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>
+                                <label> Product Name</label>
+                                <input type="text" name="PNAME" class="form-control" />
+                            </p>
+                            <p>
+                                <label> Capacity</label>
+                                <input type="text" name="PCAPACITY" class="form-control">
+                            </p>
+                            <p>
+                                <label> Type </label>
+                                <select name="PTYPEID" class="form-control">
+                                    <option selected disabled>- Select -</option>
+                                    @foreach (var item in ViewBag.vp)
+                                    {
+                                        <option value="@item.Value">@item.Text</option>
+                                    }
+
+                                </select>
+                            </p>
+
+
+                        </div>
+                        <div class="col-md-6">
+                            @*<p>
+                        <label>Country</label>
+                        <select id="country" name="COUNTRY" class="form-control">
+                            <option value="">- Select -</option>
+                        </select>
+                    </p>*@
+                            <p>
+                                <label> Serial </label>
+                                <input type="text" name="SERIAL" class="form-control">
+                            </p>
+                            <p>
+                                <label> Location </label>
+                                <input type="text" name="LOCATION" class="form-control">
+                            </p>
+                            <p>
+                                <label> Manufacturing Date </label>
+                                <input class="form-control form-control-inline input-medium date-picker" size="16" type="text" value="" name="MANUDATE" data-date-format="dd-mm-yyyy" />
+                            </p>
+                            <p>
+                                <label> Product Status </label><br />
+                                <input type="checkbox" name="PSTATUS" class="make-switch" checked value="True" data-on-text="Active" data-off-text="Passive">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                @*<div class="col-md-2">
+                        <input type="checkbox" name="PSTATUS" class="make-switch" checked value="True" data-on-text="Active" data-off-text="Passive">
+                    </div>*@
+                <button type="button" data-dismiss="modal" class="btn btn-outline dark">Cancel</button>
+                <button class="btn green">Save Changes</button>
+            </div>
+        </form>
+    </div>
+</div>

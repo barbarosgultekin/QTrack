@@ -1,0 +1,12 @@
+C:\fix\QTrack\QTrack\EntityLayer\bin\Debug\EntityLayer.dll.config
+C:\fix\QTrack\QTrack\EntityLayer\bin\Debug\EntityLayer.dll
+C:\fix\QTrack\QTrack\EntityLayer\bin\Debug\EntityLayer.pdb
+C:\fix\QTrack\QTrack\EntityLayer\bin\Debug\EntityFramework.dll
+C:\fix\QTrack\QTrack\EntityLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\fix\QTrack\QTrack\EntityLayer\bin\Debug\EntityFramework.xml
+C:\fix\QTrack\QTrack\EntityLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\fix\QTrack\QTrack\EntityLayer\obj\Debug\EntityLayer.csproj.CoreCompileInputs.cache
+C:\fix\QTrack\QTrack\EntityLayer\obj\Debug\EntityLayer.csproj.CopyComplete
+C:\fix\QTrack\QTrack\EntityLayer\obj\Debug\EntityLayer.dll
+C:\fix\QTrack\QTrack\EntityLayer\obj\Debug\EntityLayer.pdb
+C:\FIX\QTrack\QTrack\EntityLayer\obj\Debug\EntityLayer.csproj.AssemblyReference.cache

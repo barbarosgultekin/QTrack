@@ -1,0 +1,81 @@
+﻿@model EntityLayer.Concrete.QR
+
+<div id="static" class="modal" tabindex="-1" data-backdrop="static" data-keyboard="true" data-width="1000">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title"> Product Register</h2>
+        </div>
+        <form method="post" action="/QR/AddQR">
+            <div class="modal-body">
+                @*<div style="height:400px" data-always-visible="1" data-rail-visible1="1">*@
+                <div style="height:auto" data-always-visible="1" data-rail-visible1="1">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>
+                                <label> QR Code</label>
+                                <input type="text" name="QRCODE" class="form-control" />
+                            </p>
+                            <p>
+                                <label> Company</label>
+                                <select name="COMPANYID" class="form-control col-md-4">
+                                    <option selected disabled>- Select -</option>
+                                    @foreach (var x in ViewBag.cv)
+                                    {
+                                        <option value="@x.Value">@x.Text</option>
+
+                                    }
+                                </select>
+                            </p>
+                            <br />
+                            <p>
+                                <label> Product</label>
+                                <select name="PRODUCTID" class="form-control">
+                                    <option selected disabled>- Select -</option>
+                                    @foreach (var x in ViewBag.pv)
+                                    {
+                                        <option value="@x.Value">@x.Text</option>
+
+                                    }
+                                </select>
+                            </p>
+                            <p>
+                                <label> Other </label>
+                                @*<input type="text" name="OTHER" class="form-control">*@
+                                <textarea name="OTHER" class="form-control"> </textarea>
+                            </p>
+                        </div>
+                        <div class="col-md-4">
+                            <p>
+                                <label> Factory Date </label>
+                                <input class="form-control form-control-inline input-medium date-picker" size="16" type="text" value="" name="FACTORYDATE" data-date-format="dd-mm-yyyy" />
+                            </p>
+                            <p>
+                                <label> Fill Date </label>
+                                <input class="form-control form-control-inline input-medium date-picker" size="16" type="text" value="" name="FILLDATE" data-date-format="dd-mm-yyyy" />
+                            </p>
+                            <p>
+                                <label> ReFill Date </label>
+                                <input class="form-control form-control-inline input-medium date-picker" size="16" type="text" value="" name="REFILLDATE" data-date-format="dd-mm-yyyy" />
+                            </p>
+                            <p>
+                                <label> Exp Date </label>
+                                <input class="form-control form-control-inline input-medium date-picker" size="16" type="text" value="" name="EXPDATE" data-date-format="dd-mm-yyyy" />
+                            </p>
+                            <p>
+                                <label> QR Status </label><br />
+                                <input type="checkbox" name="QRSTATUS" class="make-switch" checked value="True" data-on-text="Active" data-off-text="Passive">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                @*<div class="col-md-2">
+                    <input type="checkbox" name="QRSTATUS" class="make-switch" checked value="True" data-on-text="Active" data-off-text="Passive">
+                </div>*@
+                <button type="button" data-dismiss="modal" class="btn btn-outline dark">Cancel</button>
+                <button class="btn green">Save Changes</button>
+            </div>
+        </form>
+    </div>
+</div>

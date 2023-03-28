@@ -1,0 +1,86 @@
+﻿@model EntityLayer.Concrete.Company
+@{
+    ViewBag.Title = "EditCompany";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+
+<div style="margin-top:85px">
+    <div class="col-md-12">
+        <div class="tab-pane active" id="tab_0">
+            <div class="portlet box green">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class="fa fa-edit"></i>Companies/ Edit Page
+                    </div>
+                    <div class="tools">
+                        <a href="javascript:;" class="collapse"> </a>
+                    </div>
+                </div>
+                <div class="portlet-body form">
+                    <!-- BEGIN FORM-->
+                    <form action="/Company/EditCompany?id=@Html.DisplayFor(x=>x.COMPANYID)" method="post" class="form-horizontal">
+                        <div class="form-body">
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Company Name</label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control spinner input-circle" name="CNAME" value="@Html.DisplayFor(x => x.CNAME)">
+                                    @Html.ValidationMessageFor(x => x.CNAME ,"",new {@class="text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Company Address</label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control spinner input-circle" name="CADDRESS" value="@Html.DisplayFor(x => x.CADDRESS)">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Phone</label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control spinner input-circle" name="CPHONE" value="@Html.DisplayFor(x => x.CPHONE)">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Person</label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control spinner input-circle" name="CPERSON" value="@Html.DisplayFor(x => x.CPERSON)">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Country</label>
+                                <div class="col-md-4">
+
+                                    <select id="country" name="COUNTRY" class="form-control spinner input-circle">
+                                        @*<option selected disabled>@Html.DisplayFor(x => x.COUNTRY)</option>*@
+                                        <option value="@Html.DisplayFor(x => x.COUNTRY)">@Html.DisplayFor(x => x.COUNTRY)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Domain</label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control spinner input-circle" name="CDOMAIN" value="@Html.DisplayFor(x => x.CDOMAIN)" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Status</label>
+                                <div class="col-md-4">
+                                    <input type="checkbox" name="CSTATUS" class="make-switch" checked value="True" data-on-text="Active" data-off-text="Passive" data-on-color="success" data-off-color="danger">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <div class="row">
+                                <div class="col-md-offset-3 col-md-9">
+                                    <button type="submit" class="btn btn-circle green">Save Changes</button>
+                                    <input type="hidden" name="COMPANYID" value="@Html.DisplayFor(x=>x.COMPANYID)" />
+                                    <a href="~/Company/Index" class="btn btn-circle grey-salsa btn-outline">Back</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

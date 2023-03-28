@@ -1,0 +1,112 @@
+﻿
+@model EntityLayer.Concrete.QR
+@{
+    ViewBag.Title = "EditQR";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<div style="margin-top:85px">
+    <div class="col-md-12">
+        <div class="tab-pane active" id="tab_0">
+            <div class="portlet box green">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class="fa fa-edit"></i>QR Code's / Edit Page
+                    </div>
+                    <div class="tools">
+                        <a href="javascript:;" class="collapse"> </a>
+                    </div>
+                </div>
+                <div class="portlet-body form">
+                    <!-- BEGIN FORM-->
+                    <form action="/QR/EditQR" method="post" class="form-horizontal">
+                        <div class="form-body">
+                            <div class="form-group last">
+                                <label class="col-md-3 control-label">QR Code</label>
+                                <div class="col-md-4">
+                                    <span class="form-control-static"> # @Html.DisplayFor(x => x.QRCODE) </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Location</label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control spinner input-circle" name="LOCATION" value="@Html.DisplayFor(x => x.Product.LOCATION)">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Product Name</label>
+                                <div class="col-md-4">
+                                    <select name="PRODUCTID" class="form-control spinner input-circle">
+                                        <option disabled>@Html.DisplayFor(x => x.Product.PNAME)</option>
+                                        @foreach (var x in ViewBag.pv)
+                                        {
+                                            <option name="PRODUCTID" value="@x.Value">@x.Text</option>
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Company Name</label>
+                                <div class="col-md-4">
+                                    <select name="COMPANYID" class="form-control spinner input-circle">
+                                        <option disabled>@Html.DisplayFor(x => x.Company.CNAME)</option>
+                                        @foreach (var x in ViewBag.cv)
+                                        {
+                                            <option name="COMPANYID" value="@x.Value">@x.Text</option>
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Other</label>
+                                <div class="col-md-4">
+                                    <textarea class="form-control spinner input-circle" name="OTHER" value="@Html.DisplayFor(x => x.OTHER)">@Html.DisplayFor(x => x.OTHER)</textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Exp Date</label>
+                                <div class="col-md-4">
+                                    <input class="form-control form-control-inline input-medium date-picker" size="12" type="text" value="@Html.DisplayFor(x => x.EXPDATE)" name="EXPDATE" data-date-format="dd-mm-yyyy" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Factory Date</label>
+                                <div class="col-md-4">
+                                    <input class="form-control form-control-inline input-medium date-picker" size="12" type="text" value="@Html.DisplayFor(x => x.FACTORYDATE)" name="FACTORYDATE" data-date-format="dd-mm-yyyy" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Fill Date</label>
+                                <div class="col-md-4">
+                                    <input class="form-control form-control-inline input-medium date-picker" size="12" type="text" value="@Html.DisplayFor(x => x.FILLDATE)" name="FILLDATE" data-date-format="dd-mm-yyyy" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">ReFill Date</label>
+                                <div class="col-md-8">
+                                    <input class="form-control form-control-inline input-medium date-picker" size="12" type="text" value="@Html.DisplayFor(x => x.REFILLDATE)" name="REFILLDATE" data-date-format="dd-mm-yyyy" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Status</label>
+                                <div class="col-md-4">
+                                    <input type="checkbox" name="QRSTATUS" class="make-switch" checked value="True" data-on-text="Active" data-off-text="Passive" data-on-color="success" data-off-color="danger">
+                                    <input type="hidden" name="QRCODE" value="@Html.DisplayFor(x=>x.QRCODE)" />
+                                    <input type="hidden" name="QRID" value="@Html.DisplayFor(x=>x.QRID)" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <div class="row">
+                                <div class="col-md-offset-3 col-md-9">
+                                    <button type="submit" class="btn btn-circle green">Save Changes</button>
+                                    <a href="~/QR/Index" class="btn btn-circle grey-salsa btn-outline">Back</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

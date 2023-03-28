@@ -1,0 +1,17 @@
+C:\fix\QTrack\QTrack\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+C:\fix\QTrack\QTrack\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\fix\QTrack\QTrack\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\fix\QTrack\QTrack\DataAccessLayer\bin\Debug\EntityFramework.dll
+C:\fix\QTrack\QTrack\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\fix\QTrack\QTrack\DataAccessLayer\bin\Debug\EntityLayer.dll
+C:\fix\QTrack\QTrack\DataAccessLayer\bin\Debug\EntityLayer.pdb
+C:\fix\QTrack\QTrack\DataAccessLayer\bin\Debug\EntityLayer.dll.config
+C:\fix\QTrack\QTrack\DataAccessLayer\bin\Debug\EntityFramework.xml
+C:\fix\QTrack\QTrack\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\fix\QTrack\QTrack\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\fix\QTrack\QTrack\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
+C:\fix\QTrack\QTrack\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\fix\QTrack\QTrack\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\FIX\QTrack\QTrack\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
+C:\FIX\QTrack\QTrack\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig1.resources
+C:\FIX\QTrack\QTrack\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.GenerateResource.cache

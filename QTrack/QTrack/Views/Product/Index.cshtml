@@ -1,0 +1,238 @@
+﻿@using EntityLayer.Concrete
+@model List<Product>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+
+<div style="margin-top:100px">
+
+
+    <div class="col-md-3">
+        <button class="btn btn-md yellow" data-toggle="modal" data-target="#static">
+            New Product
+            <i class="fa fa-plus"></i>
+        </button>
+    </div>
+
+    @*<div class="col-md-1">
+            <a href="~/Company/Index" class="btn btn-md red">
+                Edit Company
+                <i class="fa fa-edit"></i>
+            </a>
+        </div>*@
+
+    @*<div class="col-md-3">
+            <form class="search-form" action="http://www.google.com" method="GET">
+                <div class="input-group">
+                    <input type="search" class="form-control" placeholder="Search to Company" name="q">
+                    <span class="input-group-btn">
+                        <button class="btn btn-danger" type="submit"> <i class="icon-magnifier"></i></button>
+                    </span>
+                </div>
+            </form>
+        </div>*@
+
+
+    <br />
+    <br />
+    <br />
+    <div class="col-md-12">
+        <div class="portlet box blue">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="fa fa-cogs"></i>Product List - EL Series
+                </div>
+                <div class="tools"></div>
+            </div>
+            <div class="portlet-body">
+                @*<table class="table table-striped table-hover table-bordered" id="sample_editable_1">*@
+                <table class="table table-striped table-bordered table-hover dt-responsive" width="100%" id="sample_3" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th scope="col" style="width:450px !important"> Product Name </th>
+                            <th scope="col"> Product Type</th>
+                            <th scope="col"> Capacity</th>
+                            <th class="none"> Product ID</th>
+                            <th scope="col"> Location </th>
+                            <th scope="col"> Serial </th>
+                            <th scope="col"> Manufactoring  </th>
+                            <th scope="col"> Status / Edit </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            if (item.PTYPEID == 4)
+                            {
+                        <tr>
+                            <td>@item.PNAME</td>
+                            <td>@item.ProductType.PTYPE</td>
+                            <td>@item.PCAPACITY</td>
+                            <td>@item.PRODUCTID</td>
+                            <td align="center">
+                                <a href="@item.LOCATION" target="_blank" class="btn btn-icon-only red">
+                                    <i class="fa fa-map"></i>
+                                </a>
+                            </td>
+                            <td>@item.SERIAL</td>
+                            <td> @Convert.ToDateTime(item.MANUDATE).ToString("dd/MM/yyyy")</td>
+                            @switch (item.PSTATUS)
+                            {
+                                case true:
+                                    <td align="center"><a href="~/Product/EditProduct?id=@item.PRODUCTID" class="label label-sm label-success">Aktif</a></td>
+                                    break;
+                                case false:
+                                    <td align="center"><a href="~/Product/EditProduct?id=@item.PRODUCTID" class="label label-sm label-danger">Pasif</a></td>
+                                    break;
+                            }
+                        </tr>
+
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="portlet box red">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="fa fa-cogs"></i>Product List - CP Series
+                </div>
+                <div class="tools"></div>
+            </div>
+            <div class="portlet-body">
+                @*<table class="table table-striped table-hover table-bordered" id="sample_editable_1">*@
+                <table class="table table-striped table-bordered table-hover dt-responsive" width="100%" id="sample_4" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th scope="col" style="width:450px !important"> Product Name </th>
+                            <th scope="col"> Product Type</th>
+                            <th scope="col"> Capacity</th>
+                            <th class="none"> Product ID</th>
+                            <th scope="col"> Location </th>
+                            <th scope="col"> Serial </th>
+                            <th scope="col"> Manufactoring  </th>
+                            <th scope="col"> Product Status </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+
+                            if (item.PTYPEID == 5)
+                            {
+                        <tr>
+                            <td>@item.PNAME</td>
+                            <td>@item.ProductType.PTYPE</td>
+                            <td>@item.PCAPACITY</td>
+                            <td>@item.PRODUCTID</td>
+                            <td align="center">
+                                <a href="@item.LOCATION" target="_blank" class="btn btn-icon-only red">
+                                    <i class="fa fa-map"></i>
+                                </a>
+                            </td>
+                            <td>@item.SERIAL</td>
+                            <td> @Convert.ToDateTime(item.MANUDATE).ToString("dd/MM/yyyy")</td>
+                            @switch (item.PSTATUS)
+                            {
+                                case true:
+                                    <td align="center"><a href="~/Product/EditProduct?id=@item.PRODUCTID" class="label label-sm label-success">Aktif</a></td>
+                                    break;
+                                case false:
+                                    <td align="center"><a href="~/Product/EditProduct?id=@item.PRODUCTID" class="label label-sm label-danger">Pasif</a></td>
+                                    break;
+                            }
+                        </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="portlet box green">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="fa fa-cogs"></i>Product List - AOP Series
+                </div>
+                <div class="tools"></div>
+            </div>
+            <div class="portlet-body">
+                @*<table class="table table-striped table-hover table-bordered" id="sample_editable_1">*@
+                <table class="table table-striped table-bordered table-hover dt-responsive" width="100%" id="sample_1" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th scope="col" style="width:450px !important"> Product Name </th>
+                            <th scope="col"> Product Type</th>
+                            <th scope="col"> Capacity</th>
+                            <th class="none"> Product ID</th>
+                            <th scope="col"> Location </th>
+                            <th scope="col"> Serial </th>
+                            <th scope="col"> Manufactoring  </th>
+                            <th scope="col"> Product Status </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+
+                            if (item.PTYPEID == 1)
+                            {
+                        <tr>
+                            <td>@item.PNAME</td>
+                            <td>@item.ProductType.PTYPE</td>
+                            <td>@item.PCAPACITY</td>
+                            <td>@item.PRODUCTID</td>
+                            <td align="center">
+                                <a href="@item.LOCATION" target="_blank" class="btn btn-icon-only red">
+                                    <i class="fa fa-map"></i>
+                                </a>
+                            </td>
+                            <td>@item.SERIAL</td>
+                            <td> @Convert.ToDateTime(item.MANUDATE).ToString("dd/MM/yyyy")</td>
+                            @switch (item.PSTATUS)
+                            {
+                                case true:
+                                    <td align="center"><a href="~/Product/EditProduct?id=@item.PRODUCTID" class="label label-sm label-success">Aktif</a></td>
+                                    break;
+                                case false:
+                                    <td align="center"><a href="~/Product/EditProduct?id=@item.PRODUCTID" class="label label-sm label-danger">Pasif</a></td>
+                                    break;
+                            }
+                        </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@Html.Action("ProductPartial", "Product")
+
+<script src="~/Layout/js/jquery.js"></script>
+
+<script>
+	$(document).ready(function()
+    {
+        switch ('@TempData["protoastr"]') {
+            case "Added":
+                toastr.success('@TempData["message"]', 'Register');
+                break;
+            case "Error":
+                toastr.error('Kayıt Başarısız !!', 'Not Register');
+                break;
+            case "Edit":
+                toastr.warning('Kayıt Başarısız !!', 'Not Register');
+                break;
+            default:
+        }
+		});
+</script>

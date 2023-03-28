@@ -1,0 +1,53 @@
+﻿
+<div id="static2" class="modal fade bs-modal-lg" tabindex="-1" data-backdrop="static" data-keyboard="true" data-width="1000">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title"> QR Issue</h2>
+        </div>
+        <form method="post" action="/QRHistory/AddQRHistory">
+            <div class="modal-body">
+                <div style="height:auto" data-always-visible="1" data-rail-visible1="1">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>
+                                <label> QR CODE </label>
+                                @*<select name="QRID" class="form-control">*@
+                                <select name="QRID" class="bs-select form-control" data-live-search="true" data-size="8">
+                                    @foreach (var item in ViewBag.hiva)
+                                    {
+                                        <option value="@item.Value">@item.Text</option>
+                                    }
+                                </select>
+                            </p>
+                            <p>
+                                <label> Fill Date </label>
+                                <input class="form-control form-control-inline input-medium date-picker" size="16" type="text" value="" name="FILLDATE" data-date-format="dd-mm-yyyy" />
+                            </p>
+                            <p>
+                                <label> ReFill Date </label>
+                                <input class="form-control form-control-inline input-medium date-picker" size="16" type="text" value="" name="REFILLDATE" data-date-format="dd-mm-yyyy" />
+                            </p>
+                            <p>
+                                <label>Location </label>
+                                <input type="text" name="LOCATION" class="form-control" />
+                            </p>
+                            <p>
+                                <label>Operation </label>
+                                <input type="text" name="OPERATION" class="form-control" />
+                            </p>
+                            <p>
+                                <label> Operation Date </label>
+                                <input class="form-control form-control-inline input-medium date-picker" size="16" type="text" value="" name="OPERATIONDATE" data-date-format="dd-mm-yyyy" />
+                            </p>
+                        </div>                       
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">              
+                <button type="button" data-dismiss="modal" class="btn btn-outline dark">Cancel</button>
+                <button class="btn green">Save Changes</button>
+            </div>
+        </form>
+    </div>
+</div>
+

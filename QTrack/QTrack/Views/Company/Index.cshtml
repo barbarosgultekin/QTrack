@@ -1,0 +1,108 @@
+﻿@using EntityLayer.Concrete
+@model List<Company>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<div style="margin-top:100px">
+
+    <div class="col-md-3">
+        <button class="btn btn-md yellow" data-toggle="modal" data-target="#static">
+            New Company
+            <i class="fa fa-plus"></i>
+        </button>
+    </div>
+
+    @*<div class="col-md-1">
+            <a href="~/Company/Index" class="btn btn-md red">
+                Edit Company
+                <i class="fa fa-edit"></i>
+            </a>
+        </div>*@
+
+    @*<div class="col-md-3">
+            <form class="search-form" action="http://www.google.com" method="GET">
+                <div class="input-group">
+                    <input type="search" class="form-control" placeholder="Search to Company" name="q">
+                    <span class="input-group-btn">
+                        <button class="btn btn-danger" type="submit"> <i class="icon-magnifier"></i></button>
+                    </span>
+                </div>
+            </form>
+        </div>*@
+
+    <br />
+    <br />
+    <br />
+
+    <div class="col-md-12">
+        <div class="portlet box blue">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="fa fa-globe"></i>Company List
+                </div>
+                <div class="tools"> </div>
+            </div>
+            <div class="portlet-body">
+                <table class="table table-striped table-bordered table-hover dt-responsive" width="100%" id="sample_3" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th class="all">Company Name</th>
+                            <th class="min-tablet">Person</th>
+                            <th class="min-tablet"> Country</th>
+                            <th class="min-phone-l">Phone</th>
+                            <th class="none">Office Adress</th>
+                            <th class="none">Web Site</th>
+                            <th class="desktop">Status / Edit</th>
+                            <th class="none">ID</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.CNAME</td>
+                                <td>@item.CPERSON</td>
+                                <td> <span class="label label-sm label-success">@item.COUNTRY</span></td>
+                                <td>@item.CPHONE</td>
+                                <td>@item.CADDRESS</td>
+                                <td><a href="http://@item.CDOMAIN" target="_blank">@item.CDOMAIN</a></td>
+                                @switch (item.CSTATUS)
+                                {
+                                    case true:
+                                        <td align="center"><a href="~/Company/EditCompany?id=@item.COMPANYID" class="label label-sm label-success">Aktif</a></td>
+                                        break;
+                                    case false:
+                                        <td align="center"><a href="~/Company/EditCompany?id=@item.COMPANYID" class="label label-sm label-danger">Pasif</a></td>
+                                        break;
+                                }
+                                @*<td><a href="~/Product/ProductEdit?id=@item.COMPANYID">@item.CSTATUS</a></td>*@
+                                <td>@item.COMPANYID</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@Html.Action("CompanyPartial", "Company")
+
+<script src="~/Layout/js/jquery.js"></script>
+
+<script>
+	$(document).ready(function()
+    {
+        switch ('@TempData["msg"]') {
+            case "Added":
+                toastr.success('@TempData["message"]', 'Register');
+                break;
+            case "Error":
+                toastr.error('@TempData["message"]', 'Not Register');
+                break;
+            default:
+        }
+		});
+</script>

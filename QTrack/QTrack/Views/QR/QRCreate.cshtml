@@ -1,0 +1,29 @@
+﻿
+<div id="static3" class="modal" tabindex="-1" data-backdrop="static" data-keyboard="true" data-width="500">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title"> QR Generate</h2>
+        </div>
+        <div class="modal-body">
+            <div style="height:auto" data-always-visible="1" data-rail-visible1="1">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group form-md-line-input">
+                            <input type="text" class="form-control" id="qr" value="https://localhost:44396/QRHistory/userIndex?id=">
+                            <label for="form_control_1">Generate Link</label>
+                            <span class="help-block">Query..</span>
+                        </div>
+                    </div>                    
+                </div>
+                <div id="divYazdir">
+                    <div id="qrcode"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-outline dark">Cancel</button>
+                    <button type="button" data-dismiss="modal" class="btn btn-outline blue" onclick="javascript: printDiv('divYazdir');">Print <i class="fa fa-print"></i></button>                  
+                </div>               
+            </div>
+        </div>
+    </div>
+</div>
+

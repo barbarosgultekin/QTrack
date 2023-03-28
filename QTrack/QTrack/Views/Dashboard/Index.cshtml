@@ -1,0 +1,438 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<div style="margin-top:85px;margin-left:5px">
+    <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="dashboard-stat2 ">
+                <div class="display">
+                    <div class="number">
+                        <h3 class="font-green-sharp">
+                            <span data-counter="counterup" data-value="1349">@ViewBag.cv</span>
+                            <small class="font-green-sharp">$</small>
+                        </h3>
+                        <small>COMPANY</small>
+                    </div>
+                    <div class="icon">
+                        <i class="icon-pie-chart"></i>
+                    </div>
+                </div>
+                <div class="progress-info">
+                    <div class="progress">
+                        <span style="width: @ViewBag.cv%;" class="progress-bar progress-bar-success green-sharp">
+                            <span class="sr-only"> </span>
+                        </span>
+                    </div>
+
+                    <div class="status">
+                        <div class="status-title"> progress </div>
+                        @*<div class="status-number">@ViewBag.cv </div>*@
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="dashboard-stat2 ">
+                <div class="display">
+                    <div class="number">
+                        <h3 class="font-red-haze">
+                            <span data-counter="counterup" data-value="1349">@ViewBag.pv</span>
+                        </h3>
+                        <small>PRODUCT</small>
+                    </div>
+                    <div class="icon">
+                        <i class="icon-like"></i>
+                    </div>
+                </div>
+                <div class="progress-info">
+                    <div class="progress">
+                        <span style="width: @ViewBag.pv%;" class="progress-bar progress-bar-success red-haze">
+                            <span class="sr-only"></span>
+                        </span>
+                    </div>
+                    <div class="status">
+                        <div class="status-title"> change </div>
+                        <div class="status-number"> @ViewBag.pv% </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="dashboard-stat2 ">
+                <div class="display">
+                    <div class="number">
+                        <h3 class="font-purple-soft">
+                            <span data-counter="counterup" data-value="1349">@ViewBag.qv</span>
+                        </h3>
+                        <small>QR </small>
+                    </div>
+                    <div class="icon">
+                        <i class="icon-anchor"></i>
+                    </div>
+                </div>
+                <div class="progress-info">
+                    <div class="progress">
+                        <span style="width: @ViewBag.qv%;" class="progress-bar progress-bar-success purple-soft">
+                            <span class="sr-only"></span>
+                        </span>
+                    </div>
+                    <div class="status">
+                        <div class="status-title"> change </div>
+                        <div class="status-number"> @ViewBag.qv% </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="dashboard-stat2 ">
+                <div class="display">
+                    <div class="number">
+                        <h3 class="font-green-haze">
+                            <span data-counter="counterup" data-value="1349">1799</span>
+                        </h3>
+                        <small>NEW FEEDBACKS</small>
+                    </div>
+                    <div class="icon">
+                        <i class="icon-bag"></i>
+                    </div>
+                </div>
+                <div class="progress-info">
+                    <div class="progress">
+                        <span style="width: 56%;" class="progress-bar progress-bar-success green-haze">
+                            <span class="sr-only">85% change</span>
+                        </span>
+                    </div>
+                    <div class="status">
+                        <div class="status-title"> change </div>
+                        <div class="status-number"> 56% </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <a class="dashboard-stat dashboard-stat-v2 red" href="#">
+                <div class="visual">
+                    <i class="fa fa-bar-chart-o"></i>
+                </div>
+                <div class="details">
+                    <div class="number">
+                        <span data-counter="counterup" data-value="12,5">199</span>M$
+                    </div>
+                    <div class="desc"> Total Profit </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <a class="dashboard-stat dashboard-stat-v2 blue" href="#tab_2">
+                <div class="visual">
+                    <i class="fa fa-comments"></i>
+                </div>
+                <div class="details">
+                    <div class="number">
+                        <span data-counter="counterup" data-value="1349">300</span>
+                    </div>
+                    <div class="desc"> New Feedbacks </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <a class="dashboard-stat dashboard-stat-v2 green" href="#tab_1">
+                <div class="visual">
+                    <i class="fa fa-shopping-cart"></i>
+                </div>
+                <div class="details">
+                    <div class="number">
+                        <span data-counter="counterup" data-value="549">400</span>
+                    </div>
+                    <div class="desc"> New Orders </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <a class="dashboard-stat dashboard-stat-v2 purple" href="#tab_0">
+                <div class="visual">
+                    <i class="fa fa-globe"></i>
+                </div>
+                <div class="details">
+                    <div class="number">
+                        +
+                        <span data-counter="counterup" data-value="89">1000</span>%
+                    </div>
+                    <div class="desc"> Brand Popularity </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!---->
+
+
+
+    <div style="margin-top:20px">
+        <div class="col-md-12">
+            <div class="tab-pane passive" id="tab_0">
+                <div class="portlet box yellow">
+                    <div class="portlet-title">
+                        <div class="caption">
+                            <i class="fa fa-edit"></i>Companies
+                        </div>
+                        <div class="tools" >
+                            <a href="javascript:;" class="collapse"> </a>
+                        </div>
+                    </div>
+                    <div class="portlet-body form">
+                        <form action="/Company/EditCompany?id=" method="post" class="form-horizontal">
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Phone</label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control spinner input-circle" name="CPHONE">
+                                </div>
+                            </div> <div class="form-group">
+                                <label class="col-md-3 control-label">Phone</label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control spinner input-circle" name="CPHONE">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Phone</label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control spinner input-circle" name="CPHONE">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Phone</label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control spinner input-circle" name="CPHONE">
+                                </div>
+                            </div> <div class="form-group">
+                                <label class="col-md-3 control-label">Phone</label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control spinner input-circle" name="CPHONE">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Phone</label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control spinner input-circle" name="CPHONE">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Phone</label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control spinner input-circle" name="CPHONE">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Phone</label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control spinner input-circle" name="CPHONE">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Phone</label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control spinner input-circle" name="CPHONE">
+                                </div>
+                            </div>
+                            <div class="form-actions"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top:20px">
+        <div class="col-md-12">
+            <div class="tab-pane active" id="tab_1">
+                <div class="portlet box red">
+                    <div class="portlet-title">
+                        <div class="caption">
+                            <i class="fa fa-edit"></i>Companies/ Edit Page
+                        </div>
+                        <div class="tools">
+                            <a href="javascript:;" class="collapse"> </a>
+                        </div>
+                    </div>
+                    <div class="portlet-body form">
+                        <form action="/Company/EditCompany?id=" method="post" class="form-horizontal">
+
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Phone</label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control spinner input-circle" name="CPHONE">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Phone</label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control spinner input-circle" name="CPHONE">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Phone</label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control spinner input-circle" name="CPHONE">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Phone</label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control spinner input-circle" name="CPHONE">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Phone</label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control spinner input-circle" name="CPHONE">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Phone</label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control spinner input-circle" name="CPHONE">
+                                </div>
+                            </div> <div class="form-group">
+                                <label class="col-md-3 control-label">Phone</label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control spinner input-circle" name="CPHONE">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Phone</label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control spinner input-circle" name="CPHONE">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Phone</label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control spinner input-circle" name="CPHONE">
+                                </div>
+                            </div>
+                            <div class="form-actions"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top:20px">
+        <div class="col-md-12">
+            <div class="tab-pane active" id="tab_2">
+                <div class="portlet box blue">
+                    <div class="portlet-title">
+                        <div class="caption">
+                            <i class="fa fa-edit"></i>Companies/ Edit Page
+                        </div>
+                        <div class="tools">
+                            <a href="javascript:;" class="collapse"> </a>
+                        </div>
+                    </div>
+                    <div class="portlet-body form">
+                        <form action="/Company/EditCompany?id=" method="post" class="form-horizontal">
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Phone</label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control spinner input-circle" name="CPHONE">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Phone</label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control spinner input-circle" name="CPHONE">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Phone</label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control spinner input-circle" name="CPHONE">
+                                </div>
+                            </div> <div class="form-group">
+                                <label class="col-md-3 control-label">Phone</label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control spinner input-circle" name="CPHONE">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Phone</label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control spinner input-circle" name="CPHONE">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Phone</label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control spinner input-circle" name="CPHONE">
+                                </div>
+                            </div> <div class="form-group">
+                                <label class="col-md-3 control-label">Phone</label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control spinner input-circle" name="CPHONE">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Phone</label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control spinner input-circle" name="CPHONE">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Phone</label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control spinner input-circle" name="CPHONE">
+                                </div>
+                            </div>
+                            <div class="form-actions"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+</div>
+
+@*<div id="barbaros" data-stellar-background-ratio="0.5" style="margin-top:325px">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3127.1055451246075!2d27.089092968364902!3d38.39280860054187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbdea5492a4c67%3A0x720eb4dfcd7aa2ce!2zw5Z6ZGVtaXIgU2FiYW5jxLEgUGFya8Sx!5e0!3m2!1str!2str!4v1624091703953!5m2!1str!2str" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>*@
+
+
+@*<div>
+        <input id="fu" runat="server" accept="image/*;capture=camera" name="upload" type="file">
+    </div>*@
+
+@*<div style="margin-top:250px">
+        <footer id="footer" data-stellar-background-ratio="0.5" align="center" style="background-color:darkslategrey">
+            <div class="container">
+                <div class="row">
+                    <div class="copyright-text col-md-8 col-sm-5">
+                        <div class="col-md-6 col-sm-6">
+                            <p>Copyright &copy; 2021 Barbaros Gültekin</p>
+                        </div>
+                        <div class="col-md-2 ">
+                            <a href="#" class="fa fa-youtube" attr=""></a>
+                            <a href="#" class="fa fa-telegram"></a>
+                            <a href="#" class="fa fa-whatsapp"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>*@
+
+
+
+
